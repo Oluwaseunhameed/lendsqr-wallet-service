@@ -179,3 +179,12 @@ Signing out will revoke the current active session.
 
 Reason:
 Provides a server-side signout mechanism as required by the assessment.
+
+---
+
+## A21. Knex Will Be Used As The Database Access Layer
+
+The application will use Knex as the query builder and migration tool for MySQL interactions.
+
+Reason:
+Knex is explicitly required by the assessment and provides transaction support, migration management, and database abstraction.
