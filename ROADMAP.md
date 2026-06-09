@@ -46,11 +46,11 @@
 
 ## Phase 2 - Domain Modeling
 
-* [ ] Identify core entities
-* [ ] Define relationships
-* [ ] Define entity attributes
-* [ ] Define transaction types
-* [ ] Define business rules
+* [x] Identify core entities
+* [x] Define relationships
+* [x] Define entity attributes
+* [x] Define transaction types
+* [x] Define business rules
 
 ---
 

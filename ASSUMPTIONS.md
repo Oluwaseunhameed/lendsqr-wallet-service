@@ -134,3 +134,48 @@ If the blacklist verification service cannot be reached or returns an invalid re
 
 Reason:
 The requirement states that blacklisted users must never be onboarded. Failing closed is safer than failing open.
+
+---
+
+## A16. UUIDs Will Be Used As Primary Keys
+
+All primary keys will use UUIDs instead of auto-incrementing integers.
+
+Reason:
+UUIDs are harder to enumerate, more suitable for distributed systems, and commonly used in production-grade financial systems.
+
+---
+
+## A17. Monetary Values Will Use DECIMAL
+
+All monetary values will be stored using DECIMAL(18,2).
+
+Reason:
+Floating-point data types can introduce precision errors when handling money.
+
+---
+
+## A18. Transaction History Is Immutable
+
+Transaction records will never be updated or deleted after creation.
+
+Reason:
+Financial systems require an auditable history of all money movements.
+
+---
+
+## A19. Users May Have Multiple Active Sessions
+
+A user can be signed in from multiple devices simultaneously.
+
+Reason:
+This supports mobile and web access without forcing single-device login.
+
+---
+
+## A20. Session Revocation Will Be Used For Signout
+
+Signing out will revoke the current active session.
+
+Reason:
+Provides a server-side signout mechanism as required by the assessment.
