@@ -188,3 +188,21 @@ The application will use Knex as the query builder and migration tool for MySQL 
 
 Reason:
 Knex is explicitly required by the assessment and provides transaction support, migration management, and database abstraction.
+
+---
+
+## A22. Transaction Records Will Store Balance Snapshots
+
+Each transaction will store both the wallet balance before and after the transaction.
+
+Reason:
+Improves auditability, troubleshooting, and financial traceability.
+
+---
+
+## A23. Transaction Types Will Be Validated At Application Level
+
+Transaction type values will be stored as strings and validated within the application instead of using database ENUMs.
+
+Reason:
+Provides greater flexibility and simpler migrations when using Knex.

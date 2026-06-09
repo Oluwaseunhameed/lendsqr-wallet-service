@@ -56,14 +56,14 @@
 
 ## Phase 3 - Database Design
 
-* [ ] Create ER Diagram
-* [ ] Design users table
-* [ ] Design wallets table
-* [ ] Design transactions table
-* [ ] Design sessions table
-* [ ] Define foreign keys
-* [ ] Define indexes
-* [ ] Define constraints
+* [x] Create ER Diagram
+* [x] Design users table
+* [x] Design wallets table
+* [x] Design transactions table
+* [x] Design sessions table
+* [x] Define foreign keys
+* [x] Define indexes
+* [x] Define constraints
 
 ---
 
