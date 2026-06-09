@@ -178,7 +178,7 @@ This supports mobile and web access without forcing single-device login.
 Signing out will revoke the current active session.
 
 Reason:
-Provides a server-side signout mechanism as required by the assessment.
+Provides a server-side signout mechanism.
 
 ---
 
