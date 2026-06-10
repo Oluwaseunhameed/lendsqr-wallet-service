@@ -206,3 +206,13 @@ Transaction type values will be stored as strings and validated within the appli
 
 Reason:
 Provides greater flexibility and simpler migrations when using Knex.
+
+---
+
+A24. The application will use a feature-based modular architecture.
+
+A25. Business logic will reside in services while repositories will handle database access only.
+
+A26. Knex transactions will be initiated at the service layer.
+
+A27. Adjutor integration will be isolated behind a dedicated integration client.

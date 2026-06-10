@@ -69,12 +69,12 @@
 
 ## Phase 4 - System Architecture
 
-* [ ] Select architecture pattern
-* [ ] Define folder structure
-* [ ] Define application layers
-* [ ] Define dependency flow
-* [ ] Define error handling strategy
-* [ ] Define logging strategy
+* [x] Select architecture pattern
+* [x] Define folder structure
+* [x] Define application layers
+* [x] Define dependency flow
+* [x] Define error handling strategy
+* [x] Define logging strategy
 
 ---
 
