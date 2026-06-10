@@ -249,3 +249,48 @@ All routes will be exposed under `/api/v1`.
 
 Reason:
 Supports future API evolution without breaking existing consumers.
+
+---
+
+## A31. Passwords Will Be Hashed Using bcrypt
+
+Passwords will be hashed before persistence using bcrypt with 12 salt rounds.
+
+Reason:
+Provides secure password storage.
+
+---
+
+## A32. JWT Tokens Will Contain User And Session Identifiers
+
+JWT payloads will contain only the minimum information required for authentication.
+
+Reason:
+Reduces token size and minimizes exposure.
+
+---
+
+## A33. Validation Will Be Implemented Using Zod
+
+All incoming request payloads will be validated using Zod schemas.
+
+Reason:
+Provides runtime validation and TypeScript compatibility.
+
+---
+
+## A34. Authentication Routes Will Be Rate Limited
+
+Signin and signup endpoints will be protected by rate limiting.
+
+Reason:
+Reduces brute-force attack risks.
+
+---
+
+## A35. Sensitive Information Will Never Be Logged
+
+Passwords, tokens, secrets, and credentials will not be included in logs.
+
+Reason:
+Protects user and system security.

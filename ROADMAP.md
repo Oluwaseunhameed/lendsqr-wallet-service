@@ -91,11 +91,11 @@
 
 ## Phase 6 - Security Design
 
-* [ ] Password hashing strategy
-* [ ] JWT strategy
-* [ ] Session invalidation strategy
-* [ ] Validation strategy
-* [ ] Environment variable strategy
+* [x] Password hashing strategy
+* [x] JWT strategy
+* [x] Session invalidation strategy
+* [x] Validation strategy
+* [x] Environment variable strategy
 
 ---
 
