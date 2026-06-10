@@ -339,3 +339,39 @@ Repository methods may receive a Knex transaction object.
 
 Reason:
 Allows repositories to participate in larger transactional workflows.
+
+---
+
+## A41. Adjutor Responses Will Be Normalized Before Reaching Business Logic
+
+The AuthService will consume a simplified blacklist verification result rather than raw Adjutor responses.
+
+Reason:
+Reduces coupling between business logic and third-party APIs.
+
+---
+
+## A42. The System Will Fail Closed When Adjutor Is Unavailable
+
+If blacklist verification cannot be completed, user onboarding will be rejected.
+
+Reason:
+The assessment requires that blacklisted users must never be onboarded.
+
+---
+
+## A43. Adjutor Requests Will Use A 5-Second Timeout
+
+Blacklist verification requests will timeout after 5 seconds.
+
+Reason:
+Prevents long-running requests from degrading user experience.
+
+---
+
+## A44. Adjutor Integration Will Be Mocked During Unit Tests
+
+Unit tests will not call the real Adjutor API.
+
+Reason:
+Ensures deterministic and fast test execution.

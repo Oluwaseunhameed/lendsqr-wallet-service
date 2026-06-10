@@ -110,11 +110,11 @@
 
 ## Phase 8 - Adjutor Integration
 
-* [ ] Register Adjutor account
-* [ ] Review API documentation
-* [ ] Create Adjutor client
-* [ ] Create blacklist verification service
-* [ ] Define failure handling strategy
+* [x] Register Adjutor account
+* [x] Review API documentation
+* [x] Create Adjutor client
+* [x] Create blacklist verification service
+* [x] Define failure handling strategy
 
 ---
 
