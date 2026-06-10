@@ -294,3 +294,48 @@ Passwords, tokens, secrets, and credentials will not be included in logs.
 
 Reason:
 Protects user and system security.
+
+---
+
+## A36. All Wallet Operations Will Execute Within Database Transactions
+
+Funding, withdrawals, and transfers will be executed inside database transactions.
+
+Reason:
+Ensures atomicity and prevents partial updates.
+
+---
+
+## A37. Wallet Rows Will Be Locked During Balance Modifications
+
+Wallet records will be locked during withdrawals and transfers.
+
+Reason:
+Prevents race conditions and balance inconsistencies.
+
+---
+
+## A38. Transfers Will Generate Two Transaction Records
+
+A transfer will create both a TRANSFER_OUT and TRANSFER_IN transaction.
+
+Reason:
+Provides complete financial auditability.
+
+---
+
+## A39. Transfer Records Will Share A Common Transfer Reference
+
+Both sides of a transfer will share the same transfer_reference.
+
+Reason:
+Simplifies reconciliation and transaction tracing.
+
+---
+
+## A40. Repository Methods Will Support Transaction Contexts
+
+Repository methods may receive a Knex transaction object.
+
+Reason:
+Allows repositories to participate in larger transactional workflows.

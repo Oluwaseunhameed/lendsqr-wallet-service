@@ -101,10 +101,10 @@
 
 ## Phase 7 - Transaction Design
 
-* [ ] Fund wallet transaction flow
-* [ ] Transfer transaction flow
-* [ ] Withdrawal transaction flow
-* [ ] Rollback strategy
+* [x] Fund wallet transaction flow
+* [x] Transfer transaction flow
+* [x] Withdrawal transaction flow
+* [x] Rollback strategy
 
 ---
 
