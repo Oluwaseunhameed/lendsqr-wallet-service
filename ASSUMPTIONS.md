@@ -209,10 +209,43 @@ Provides greater flexibility and simpler migrations when using Knex.
 
 ---
 
-A24. The application will use a feature-based modular architecture.
+## A24. The application will use a feature-based modular architecture.
 
-A25. Business logic will reside in services while repositories will handle database access only.
+---
 
-A26. Knex transactions will be initiated at the service layer.
+## A25. Business logic will reside in services while repositories will handle database access only.
 
-A27. Adjutor integration will be isolated behind a dedicated integration client.
+---
+
+## A26. Knex transactions will be initiated at the service layer.
+
+---
+
+## A27. Adjutor integration will be isolated behind a dedicated integration client.
+
+---
+
+## A28. Transaction History Endpoint Will Be Exposed
+
+A transaction history endpoint will be provided even though it is not explicitly requested.
+
+Reason:
+Improves auditability and allows easier verification of wallet operations.
+
+---
+
+## A29. API Responses Will Follow A Consistent Envelope
+
+All success and error responses will use a standard response structure.
+
+Reason:
+Provides consistency for API consumers and simplifies client-side integration.
+
+---
+
+## A30. API Routes Will Be Versioned
+
+All routes will be exposed under `/api/v1`.
+
+Reason:
+Supports future API evolution without breaking existing consumers.

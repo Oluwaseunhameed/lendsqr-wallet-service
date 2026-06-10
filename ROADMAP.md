@@ -80,12 +80,12 @@
 
 ## Phase 5 - API Design
 
-* [ ] Design authentication endpoints
-* [ ] Design wallet endpoints
-* [ ] Design transaction endpoints
-* [ ] Define request contracts
-* [ ] Define response contracts
-* [ ] Define error responses
+* [x] Design authentication endpoints
+* [x] Design wallet endpoints
+* [x] Design transaction endpoints
+* [x] Define request contracts
+* [x] Define response contracts
+* [x] Define error responses
 
 ---
 
