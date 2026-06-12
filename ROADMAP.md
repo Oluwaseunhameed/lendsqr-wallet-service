@@ -136,7 +136,7 @@
 * [x] Create wallets migration
 * [x] Create transactions migration
 * [x] Create sessions migration
-* [ ] Execute migration testing
+* [x] Execute migration testing
 
 ---
 
