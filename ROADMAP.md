@@ -120,22 +120,22 @@
 
 ## Phase 9 - Project Foundation
 
-* [ ] Initialize Node.js project
-* [ ] Configure TypeScript
-* [ ] Configure ESLint
-* [ ] Configure Prettier
-* [ ] Configure Knex
-* [ ] Configure MySQL connection
-* [ ] Configure environment variables
+* [x] Initialize Node.js project
+* [x] Configure TypeScript
+* [x] Configure ESLint
+* [x] Configure Prettier
+* [x] Configure Knex
+* [x] Configure MySQL connection
+* [x] Configure environment variables
 
 ---
 
 ## Phase 10 - Database Implementation
 
-* [ ] Create users migration
-* [ ] Create wallets migration
-* [ ] Create transactions migration
-* [ ] Create sessions migration
+* [x] Create users migration
+* [x] Create wallets migration
+* [x] Create transactions migration
+* [x] Create sessions migration
 * [ ] Execute migration testing
 
 ---

@@ -1,0 +1,17 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
+export const env = {
+  nodeEnv: process.env.NODE_ENV ?? "development",
+  port: Number(process.env.PORT) || 3000,
+  dbHost: process.env.DB_HOST!,
+  dbPort: Number(process.env.DB_PORT),
+  dbUser: process.env.DB_USER!,
+  dbPassword: process.env.DB_PASSWORD!,
+  dbName: process.env.DB_NAME!,
+  jwtSecret: process.env.JWT_SECRET!,
+  jwtExpiresIn: process.env.JWT_EXPIRES_IN!,
+  adjutorApiKey: process.env.ADJUTOR_API_KEY!,
+  adjutorBaseUrl: process.env.ADJUTOR_BASE_URL!,
+};
