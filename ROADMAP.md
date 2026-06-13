@@ -152,12 +152,12 @@
 
 ## Phase 12 - Authentication Module
 
-* [ ] Implement signup
+* [x] Implement signup
+* [x] Implement wallet auto-creation
+* [x] Implement signin
+* [x] Implement signout
+* [x] Implement JWT issuance
 * [ ] Implement blacklist verification
-* [ ] Implement wallet auto-creation
-* [ ] Implement signin
-* [ ] Implement signout
-* [ ] Implement JWT issuance
 
 ---
 
