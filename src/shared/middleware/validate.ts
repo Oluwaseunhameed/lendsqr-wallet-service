@@ -1,8 +1,8 @@
 import { BadRequestError } from "../errors";
 import { NextFunction, Request, Response } from "express";
-import { ZodSchema } from "zod";
+import { ZodTypeAny } from "zod";
 
-export function validate(schema: ZodSchema) {
+export function validate(schema: ZodTypeAny) {
   return (req: Request, _res: Response, next: NextFunction): void => {
     const result = schema.safeParse(req.body);
 

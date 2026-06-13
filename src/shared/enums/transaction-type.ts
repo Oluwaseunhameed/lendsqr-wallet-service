@@ -1,0 +1,6 @@
+export enum TransactionType {
+  FUND = "FUND",
+  WITHDRAWAL = "WITHDRAWAL",
+  TRANSFER_IN = "TRANSFER_IN",
+  TRANSFER_OUT = "TRANSFER_OUT",
+}
