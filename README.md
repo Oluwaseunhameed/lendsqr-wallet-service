@@ -31,7 +31,6 @@ The application provides user authentication, wallet management, blacklist verif
 * Request validation using Zod
 * Session revocation on signout
 * Adjutor blacklist verification
-* Rate limiting on authentication endpoints
 
 ## Reliability
 
@@ -56,6 +55,16 @@ Repository
     ↓
 Database
 ```
+
+# Entity Relationship Diagram
+
+ER Diagram:
+
+![ER Diagram](docs/lensqr_wallet_service_erdiagram.drawio.png)
+
+Source:
+
+docs/lendsqr_wallet_service_erdiagram.drawio
 
 ## Responsibilities
 
