@@ -1,0 +1,9 @@
+export const TRANSACTION_TYPES = {
+  FUNDING: "FUNDING",
+  TRANSFER_DEBIT: "TRANSFER_DEBIT",
+  TRANSFER_CREDIT: "TRANSFER_CREDIT",
+  WITHDRAWAL: "WITHDRAWAL",
+} as const;
+
+export type TransactionType =
+  (typeof TRANSACTION_TYPES)[keyof typeof TRANSACTION_TYPES];

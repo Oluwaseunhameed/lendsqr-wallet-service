@@ -14,16 +14,33 @@ import { AuthResponse, SigninInput, SignupInput } from "./auth.types";
 
 import { SessionRepository } from "./session.repository";
 import { comparePassword, hashPassword } from "../../shared/utils/password";
+import { AdjutorService } from "../../integrations/adjutor/adjutor.service";
+
+import { BlacklistedUserError } from "../../shared/errors";
 
 export class AuthService {
   constructor(
     private readonly userRepository = new UserRepository(),
     private readonly walletRepository = new WalletRepository(),
     private readonly sessionRepository = new SessionRepository(),
+    private readonly adjutorService = new AdjutorService(),
   ) {}
 
   async signup(payload: SignupInput): Promise<AuthResponse> {
     const email = payload.email.trim().toLowerCase();
+    const emailCheck = await this.adjutorService.checkIdentity(email);
+
+    if (emailCheck.isBlacklisted) {
+      throw new BlacklistedUserError();
+    }
+
+    const phoneCheck = await this.adjutorService.checkIdentity(
+      payload.phoneNumber,
+    );
+
+    if (phoneCheck.isBlacklisted) {
+      throw new BlacklistedUserError();
+    }
     const existingUser = await this.userRepository.findByEmail(email);
 
     if (existingUser) {

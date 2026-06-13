@@ -157,28 +157,28 @@
 * [x] Implement signin
 * [x] Implement signout
 * [x] Implement JWT issuance
-* [ ] Implement blacklist verification
+* [x] Implement blacklist verification
 
 ---
 
 ## Phase 13 - Wallet Module
 
-* [ ] Get wallet details
-* [ ] Fund wallet
-* [ ] Transfer funds
-* [ ] Withdraw funds
-* [ ] Transaction history
+* [x] Get wallet details
+* [x] Fund wallet
+* [x] Transfer funds
+* [x] Withdraw funds
+* [x] Transaction history
 
 ---
 
 ## Phase 14 - Business Rule Validation
 
-* [ ] Duplicate email validation
-* [ ] Duplicate phone validation
-* [ ] Self-transfer validation
-* [ ] Positive amount validation
-* [ ] Insufficient balance validation
-* [ ] Blacklist validation
+* [x] Duplicate email validation
+* [x] Duplicate phone validation
+* [x] Self-transfer validation
+* [x] Positive amount validation
+* [x] Insufficient balance validation
+* [x] Blacklist validation
 
 ---
 

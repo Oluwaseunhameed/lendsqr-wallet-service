@@ -5,6 +5,7 @@ import pinoHttp from "pino-http";
 import { logger } from "./shared/utils/logger";
 import { router } from "./routes";
 import { errorHandler } from "./shared/middleware/error-handler";
+import { NotFoundError } from "./shared/errors";
 
 const app = express();
 
@@ -20,8 +21,6 @@ app.use(
   }),
 );
 
-app.use(errorHandler);
-
 app.get("/health", (_, res) => {
   res.status(200).json({
     success: true,
@@ -30,5 +29,11 @@ app.get("/health", (_, res) => {
 });
 
 app.use("/api/v1", router);
+
+app.use((_req, _res, next) => {
+  next(new NotFoundError("Route not found"));
+});
+
+app.use(errorHandler);
 
 export default app;

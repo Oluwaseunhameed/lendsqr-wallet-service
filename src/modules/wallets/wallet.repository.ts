@@ -43,4 +43,45 @@ export class WalletRepository {
 
     return row ? WalletMapper.toDomain(row) : null;
   }
+
+  async findByIdForUpdate(
+    id: string,
+    trx: DatabaseTransaction,
+  ): Promise<Wallet | null> {
+    const row = await trx<WalletRow>("wallets")
+      .where({ id })
+      .forUpdate()
+      .first();
+
+    return row ? WalletMapper.toDomain(row) : null;
+  }
+
+  async findByUserIdForUpdate(
+    userId: string,
+    trx: DatabaseTransaction,
+  ): Promise<Wallet | null> {
+    const row = await trx<WalletRow>("wallets")
+      .where({
+        user_id: userId,
+      })
+      .forUpdate()
+      .first();
+
+    return row ? WalletMapper.toDomain(row) : null;
+  }
+
+  async updateBalance(
+    walletId: string,
+    balance: number,
+    trx: DatabaseTransaction,
+  ): Promise<void> {
+    await trx("wallets")
+      .where({
+        id: walletId,
+      })
+      .update({
+        balance,
+        updated_at: trx.fn.now(),
+      });
+  }
 }
