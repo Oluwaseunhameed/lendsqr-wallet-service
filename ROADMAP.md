@@ -184,12 +184,12 @@
 
 ## Phase 15 - Unit Testing
 
-* [ ] Configure Jest
-* [ ] Configure test environment
-* [ ] Authentication tests
-* [ ] Wallet tests
-* [ ] Transfer tests
-* [ ] Withdrawal tests
+* [x] Configure Jest
+* [x] Configure test environment
+* [x] Authentication tests
+* [x] Wallet tests
+* [x] Transfer tests
+* [x] Withdrawal tests
 * [ ] Adjutor integration tests
 
 ---

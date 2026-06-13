@@ -20,10 +20,10 @@ import { BlacklistedUserError } from "../../shared/errors";
 
 export class AuthService {
   constructor(
-    private readonly userRepository = new UserRepository(),
-    private readonly walletRepository = new WalletRepository(),
-    private readonly sessionRepository = new SessionRepository(),
-    private readonly adjutorService = new AdjutorService(),
+    private readonly userRepository: UserRepository = new UserRepository(),
+    private readonly walletRepository: WalletRepository = new WalletRepository(),
+    private readonly sessionRepository: SessionRepository = new SessionRepository(),
+    private readonly adjutorService: AdjutorService = new AdjutorService(),
   ) {}
 
   async signup(payload: SignupInput): Promise<AuthResponse> {
@@ -68,7 +68,7 @@ export class AuthService {
           id: userId,
           firstName: payload.firstName,
           lastName: payload.lastName,
-          email: payload.email,
+          email,
           phoneNumber: payload.phoneNumber,
           passwordHash,
         },

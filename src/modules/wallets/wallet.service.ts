@@ -24,6 +24,7 @@ import { TRANSACTION_TYPES } from "../../shared/constants/transaction-types";
 import { TransactionRepository } from "../transactions/transaction.repository";
 
 import { WalletRepository } from "./wallet.repository";
+import { Transaction } from "../transactions/transaction.types";
 
 export class WalletService {
   constructor(
@@ -251,7 +252,7 @@ export class WalletService {
     });
   }
 
-  async getTransactionHistory(walletId: string) {
+  async getTransactionHistory(walletId: string): Promise<Transaction[]> {
     const wallet = await this.walletRepository.findById(walletId);
 
     if (!wallet) {
