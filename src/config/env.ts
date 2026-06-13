@@ -3,7 +3,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const env = {
-  nodeEnv: process.env.NODE_ENV ?? "development",
+  isProduction: process.env.NODE_ENV === "production",
+  isDevelopment: process.env.NODE_ENV !== "production",
   port: Number(process.env.PORT) || 3000,
   dbHost: process.env.DB_HOST!,
   dbPort: Number(process.env.DB_PORT),
