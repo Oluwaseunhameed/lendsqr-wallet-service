@@ -21,6 +21,15 @@ app.use(
   }),
 );
 
+app.get("/", (_, res) => {
+  res.status(200).json({
+    success: true,
+    service: "Lendsqr Wallet Service",
+    version: "v1",
+    health: "/health",
+  });
+});
+
 app.get("/health", (_, res) => {
   res.status(200).json({
     success: true,
